@@ -1,0 +1,14 @@
+{
+    "name": "Timer Clock Web App",
+    "short_name": "Timer Clock",
+    "lang": "en-US",
+    "start_url": "/",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": "webapp-icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ]
+  }
