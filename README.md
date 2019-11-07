@@ -1,5 +1,8 @@
 # Timer Clock WebApp
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e96dc8ef-7e3b-4fea-847f-6829b9493d6c/deploy-status)](https://app.netlify.com/sites/timer-clock/deploys)
+
+
 ---
 
 Add timer-clock app
