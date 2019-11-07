@@ -1,0 +1,15 @@
+{{ define "main" }}
+
+<figure class="clock"></figure>
+<link rel="stylesheet" type="text/css" media="screen" href="/timer-clock/src/clock.css">
+<script src="/timer-clock/src/d3.min.js"></script>
+<h1 id="title">TIMER CLOCK</h1>
+<div id="status"><span></span></div>
+<p id="credits">Crafted by <strong>Natan Santolo</strong><br /> <small>Sound effect by Daniel Simon</small></p>
+<div class="buttons">
+  <button id="stop-clock" alt="STOP" title="STOP"><span>STOP</span></button>
+  <button id="reset-clock" alt="RESET" title="RESET"><span>RESET</span></button>
+</div>
+<script src="/timer-clock/src/clock.js"></script>
+
+{{ end }}

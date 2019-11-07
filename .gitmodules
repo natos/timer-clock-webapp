@@ -1,0 +1,6 @@
+[submodule "src/timer-clock"]
+	path = src/timer-clock
+	url = git@github.com:natos/timer-clock.git
+[submodule "site/static/timer-clock"]
+	path = site/static/timer-clock
+	url = git@github.com:natos/timer-clock.git

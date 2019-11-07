@@ -1,0 +1,163 @@
+body {
+  background-color: #eeeeee;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+figure {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+}
+.buttons button span {
+  color: white;
+}
+
+.buttons button {
+    outline: none;
+    border: none;
+    border-radius: .5em;
+    height: 2em;
+    width: 6em;
+    margin: 0;
+    opacity: .9;
+}
+.buttons button:hover {
+  opacity: 1;
+}
+
+.buttons #stop-clock {
+  background: rgb(228, 90, 90);
+}
+.buttons #stop-clock:active {
+  background: rgb(255, 47, 47);
+}
+.buttons #reset-clock {
+  background: rgb(74,74,74);
+}
+.buttons #reset-clock:active {
+  background: rgb(126, 126, 126);
+}
+
+#title {
+  font-size: 1em;
+  position: absolute;
+  top: 22em;
+  text-align: center;
+  width: 100%;
+}
+#credits {
+  color: #ccc;
+  font-size: .75em;
+  position: absolute;
+  bottom: 0em;
+  left: 1em;
+  width: 100%;
+}
+#status {
+  position: absolute;
+  top: 1em;
+  left: 50%;
+  margin: 0 -.5em;
+  width: 1em;
+  height: 1em;
+  /* background-color: rgb(0, 255, 0); */
+  border-radius: 100%;
+  overflow: hidden;
+  transition: all .25s ease-in-out;
+}
+
+#status.running {
+  margin: 0 -2.5em;
+  width: 5em;
+  border-radius: 1em;
+}
+
+#status.running > span {
+  background-color: #f0a3a3;
+  background-image: linear-gradient(to bottom, #f0a3a3, #f42323);
+}
+
+#status > span {
+  display: block;
+  height: 100%;
+  /* border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px; */
+  /* border-radius: 100%; */
+  background-color: rgb(43,194,83);
+  background-image: linear-gradient(
+    center bottom,
+    rgb(43,194,83) 37%,
+    rgb(84,240,84) 69%
+  );
+  box-shadow: 
+    inset 0 2px 9px  rgba(255,255,255,0.3),
+    inset 0 -2px 6px rgba(0,0,0,0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+#status > span:after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background-image: linear-gradient(
+    -45deg, 
+    rgba(255, 255, 255, .2) 25%, 
+    transparent 25%, 
+    transparent 50%, 
+    rgba(255, 255, 255, .2) 50%, 
+    rgba(255, 255, 255, .2) 75%, 
+    transparent 75%, 
+    transparent
+  );
+  z-index: 1;
+  background-size: 50px 50px;
+  /* animation: move 2s linear infinite; */
+  /* border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px; */
+  /* border-radius: 100%; */
+  overflow: hidden;
+}
+
+#status.running > span:after,
+#status.running > span > span {
+  animation: move 2s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}

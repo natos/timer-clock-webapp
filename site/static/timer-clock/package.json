@@ -1,0 +1,46 @@
+{
+  "name": "clock-timer",
+  "productName": "TimerClock",
+  "version": "1.0.0",
+  "description": "Simple Timer Clock",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": {
+    "name": "Natan Santolo",
+    "email": "natan.santolo@lazada.com"
+  },
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "icon": "./assets/app-icon.icns"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-dmg",
+          "config": {
+            "format": "ULFO",
+            "name": "TimerClock",
+            "icon": "./assets/dmg-icon.icns"
+          }
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "6.0.0-beta.44",
+    "@electron-forge/maker-zip": "6.0.0-beta.44",
+    "@electron-forge/maker-dmg": "6.0.0-beta.44",
+    "electron": "6.0.3"
+  }
+}
